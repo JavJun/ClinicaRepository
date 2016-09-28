@@ -5,13 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# Profile.create(
-#     name: 'Administrador',
-#     security: 1,
-#     created_at: DateTime.strptime("09/27/2016 8:00", "%m/%d/%Y %H:%M") ,
-#     updated_at: DateTime.strptime("09/27/2016 8:00", "%m/%d/%Y %H:%M") 
-#     )
-    
- User.create(
-     email: 'admin@firstbeats.com',               
+ Profile.create(
+    name: 'Administrador',
+    security: 1,
+    created_at: DateTime.strptime("09/27/2016 8:00", "%m/%d/%Y %H:%M") ,
+    updated_at: DateTime.strptime("09/27/2016 8:00", "%m/%d/%Y %H:%M") 
     )
+ User.create(:name => 'admin', 
+  :password => 'abc123', 
+  :password_confirmation => 'abc123',
+  :profile_id => 1,
+  :email => 'admin@firstbeats.com'
+  )

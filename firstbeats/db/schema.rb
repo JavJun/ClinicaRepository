@@ -26,20 +26,20 @@ ActiveRecord::Schema.define(version: 20160928052512) do
   end
 
   create_table "profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "profilename"
+    t.string   "name"
     t.integer  "security"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "themes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "nametheme"
+    t.string   "theme"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "username"
+    t.string   "name"
     t.string   "middle"
     t.string   "firstname"
     t.string   "lastname"
