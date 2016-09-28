@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :users
+  resources :profiles
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'pages/index'
 
   get 'pages/faq'
