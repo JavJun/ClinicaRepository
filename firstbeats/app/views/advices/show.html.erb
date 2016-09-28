@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @advice.description %>
+</p>
+
+<p>
+  <strong>Creation:</strong>
+  <%= @advice.creation %>
+</p>
+
+<p>
+  <strong>Activate advice:</strong>
+  <%= @advice.activate_advice %>
+</p>
+
+<p>
+  <strong>Validate advice:</strong>
+  <%= @advice.validate_advice %>
+</p>
+
+<p>
+  <strong>Theme:</strong>
+  <%= @advice.theme %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @advice.user %>
+</p>
+
+<%= link_to 'Edit', edit_advice_path(@advice) %> |
+<%= link_to 'Back', advices_path %>

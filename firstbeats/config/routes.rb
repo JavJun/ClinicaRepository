@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :advices
+  resources :themes
   devise_for :users
   resources :users
   resources :profiles
