@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160928052512) do
+ActiveRecord::Schema.define(version: 20160929042540) do
 
   create_table "advices", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "description",     limit: 65535
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20160928052512) do
     t.integer  "security"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["security"], name: "index_profiles_on_security", unique: true, using: :btree
   end
 
   create_table "themes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
