@@ -15,8 +15,8 @@ Rails.application.routes.draw do
   get 'pages/about_us'
 
   get 'pages/contact_us'
-
-  get '/secret', to: 'pages#secret', as: :secret
   
+  get 'creatives/index'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
