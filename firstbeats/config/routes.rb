@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :profiles
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   
-  root 'pages#index'
+  root 'creatives#index'
   
   get 'pages/index'
 
