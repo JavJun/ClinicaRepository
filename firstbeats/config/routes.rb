@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users
   resources :advices
   resources :themes
@@ -7,14 +8,6 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   
   root 'creatives#index'
-  
-  # get 'pages/index'
-
-  # get 'pages/faq'
-
-  # get 'pages/about_us'
-
-  # get 'pages/contact_us'
   
   get 'creatives/index'
 
