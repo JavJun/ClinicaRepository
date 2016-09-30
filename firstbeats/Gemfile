@@ -51,7 +51,7 @@ group :development do
   gem 'devise'
   gem 'devise-bootstrap-views'
   gem 'rails_admin'
-  
+  #rails rspec
   gem "rspec-rails"
 end
 
