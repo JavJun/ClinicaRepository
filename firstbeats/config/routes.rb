@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
-
+scope '/api' do
+    scope '/v1' do
+        resources :advices
+        resources :themes
+  end
+end
   devise_for :users
-  resources :advices
-  resources :themes
+#  resources :advices
+#  resources :themes
   resources :users
   resources :profiles
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
