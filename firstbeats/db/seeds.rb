@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
  
- vardate = DateTime.strptime("09/27/2016 8:00", "%m/%d/%Y %H:%M")
+vardate = DateTime.strptime("09/27/2016 8:00", "%m/%d/%Y %H:%M")
  
 profiles = Profile.create([
 {name: 'Administrador', security: 1, created_at:  vardate, updated_at: vardate},
@@ -17,7 +17,7 @@ profiles = Profile.create([
 ])
 
     
- users =  User.create([
+users =  User.create([
 {:name => 'admin', :password => 'abc123', :password_confirmation => 'abc123',:profile_id => 1,:email => 'admin@firstbeats.com'},
 {:name => '1', :password => 'abc123', :password_confirmation => 'abc123',:profile_id => 2,:email => 'test@firstbeats.com'},
 {:name => '2', :password => 'abc123', :password_confirmation => 'abc123',:profile_id => 2,:email => 'test1@firstbeats.com'},
