@@ -1,3 +1,4 @@
+module Api::V1
 class AdvicesController < ApplicationController
   before_action :set_advice, only: [:show, :update, :destroy]
 
@@ -48,4 +49,5 @@ class AdvicesController < ApplicationController
     def advice_params
       params.require(:advice).permit(:title)
     end
+end
 end

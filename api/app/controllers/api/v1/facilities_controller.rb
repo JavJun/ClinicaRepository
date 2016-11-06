@@ -1,3 +1,4 @@
+module Api::V1
 class FacilitiesController < ApplicationController
   before_action :set_facility, only: [:show, :update, :destroy]
 
@@ -48,4 +49,5 @@ class FacilitiesController < ApplicationController
     def facility_params
       params.require(:facility).permit(:name)
     end
+end
 end

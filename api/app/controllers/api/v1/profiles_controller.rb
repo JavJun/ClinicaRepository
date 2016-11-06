@@ -1,3 +1,4 @@
+module Api::V1
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :update, :destroy]
 
@@ -48,4 +49,5 @@ class ProfilesController < ApplicationController
     def profile_params
       params.require(:profile).permit(:name)
     end
+end
 end
