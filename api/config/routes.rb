@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  
    namespace :api do
     scope module: 'v1' do
         post 'authenticate', to: 'authentication#authenticate'
         resources :advices
         resources :profiles
         resources :facilities
+        resources :patients
       #  get 'users/:id', to: 'users#show'
     end
   end

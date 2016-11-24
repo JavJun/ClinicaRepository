@@ -10,18 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161105003919) do
+ActiveRecord::Schema.define(version: 20161124011049) do
 
   create_table "advices", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "message"
+    t.integer  "week"
+    t.string   "image_url"
   end
 
   create_table "facilities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "address"
+    t.string   "district"
+    t.string   "sede"
+  end
+
+  create_table "patients", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.string   "last_name"
+    t.integer  "age"
+    t.string   "address"
+    t.string   "cellphone"
+    t.string   "facility"
+    t.datetime "pregnancy"
+    t.datetime "child_birth"
+    t.datetime "birthday"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["user_id"], name: "index_patients_on_user_id", using: :btree
   end
 
   create_table "profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -38,4 +60,5 @@ ActiveRecord::Schema.define(version: 20161105003919) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "patients", "users"
 end

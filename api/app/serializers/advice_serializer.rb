@@ -1,3 +1,3 @@
 class AdviceSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :week, :message
 end
